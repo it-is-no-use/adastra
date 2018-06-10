@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Administrator">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Действие со справочниками">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="ob_table" layoutX="14.0" layoutY="14.0" prefHeight="195.0" prefWidth="370.0">
+                          <columns>
+                            <TableColumn fx:id="ob_id" prefWidth="69.0" text="№" />
+                            <TableColumn fx:id="ob_name" prefWidth="300.0" text="Объекты" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="314.0" layoutY="213.0" mnemonicParsing="false" onAction="#ob_add" prefHeight="25.0" prefWidth="70.0" text="Добавить" />
+                        <Button layoutX="314.0" layoutY="242.0" mnemonicParsing="false" onAction="#ob_edit" prefHeight="25.0" prefWidth="70.0" text="Изменить" />
+                        <Button layoutX="314.0" layoutY="273.0" mnemonicParsing="false" onAction="#ob_remove" prefHeight="25.0" prefWidth="70.0" text="Удалить" />
+                        <TextField fx:id="ob_txt2" layoutX="95.0" layoutY="243.0" prefHeight="25.0" prefWidth="210.0" />
+                        <TextField fx:id="ob_txt1" layoutX="14.0" layoutY="243.0" prefHeight="25.0" prefWidth="70.0" />
+                        <TableView fx:id="truck_table" layoutX="415.0" layoutY="311.0" prefHeight="195.0" prefWidth="400.0">
+                          <columns>
+                            <TableColumn fx:id="truck_id" prefWidth="55.0" text="№" />
+                            <TableColumn fx:id="truck_name" prefWidth="165.0" text="Марка машины" />
+                              <TableColumn fx:id="gov_number" prefWidth="179.0" text="Гос. номер" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="truck_txt1" layoutX="415.0" layoutY="540.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="truck_txt3" layoutX="614.0" layoutY="539.0" prefHeight="25.0" prefWidth="123.0" />
+                        <Button layoutX="745.0" layoutY="570.0" mnemonicParsing="false" onAction="#truck_remove" prefHeight="25.0" prefWidth="70.0" text="Удалить" />
+                        <Button layoutX="745.0" layoutY="540.0" mnemonicParsing="false" onAction="#truck_edit" prefHeight="25.0" prefWidth="70.0" text="Изменить" />
+                        <Button layoutX="745.0" layoutY="510.0" mnemonicParsing="false" onAction="#truck_add" prefHeight="25.0" prefWidth="70.0" text="Добавить" />
+                        <TextField fx:id="truck_txt2" layoutX="484.0" layoutY="540.0" prefHeight="25.0" prefWidth="123.0" />
+                        <TableView fx:id="driver_table" layoutX="15.0" layoutY="311.0" prefHeight="195.0" prefWidth="370.0">
+                          <columns>
+                            <TableColumn fx:id="driver_id" prefWidth="66.0" text="№" />
+                            <TableColumn fx:id="driver_fullname" prefWidth="303.0" text="Ф.И.О. Водителя" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="314.0" layoutY="513.0" mnemonicParsing="false" onAction="#driver_add" prefHeight="25.0" prefWidth="70.0" text="Добавить" />
+                        <Button layoutX="314.0" layoutY="545.0" mnemonicParsing="false" onAction="#driver_edit" prefHeight="25.0" prefWidth="70.0" text="Изменить" />
+                        <Button layoutX="314.0" layoutY="577.0" mnemonicParsing="false" onAction="#driver_remove" prefHeight="25.0" prefWidth="70.0" text="Удалить" />
+                        <TextField fx:id="driver_txt2" layoutX="95.0" layoutY="545.0" prefHeight="25.0" prefWidth="210.0" />
+                        <TextField fx:id="driver_txt1" layoutX="15.0" layoutY="545.0" prefHeight="25.0" prefWidth="70.0" />
+                        <TableView fx:id="mat_table" layoutX="429.0" layoutY="14.0" prefHeight="195.0" prefWidth="370.0">
+                          <columns>
+                            <TableColumn fx:id="mat_id" prefWidth="75.0" text="№" />
+                            <TableColumn fx:id="mat_name" prefWidth="294.0" text="Материалы" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="mat_txt1" layoutX="429.0" layoutY="242.0" prefHeight="25.0" prefWidth="70.0" />
+                        <TextField fx:id="mat_txt2" layoutX="510.0" layoutY="242.0" prefHeight="25.0" prefWidth="210.0" />
+                        <Button layoutX="729.0" layoutY="273.0" mnemonicParsing="false" onAction="#mat_remove" prefHeight="25.0" prefWidth="70.0" text="Удалить" />
+                        <Button layoutX="729.0" layoutY="242.0" mnemonicParsing="false" onAction="#mat_edit" prefHeight="25.0" prefWidth="70.0" text="Изменить" />
+                        <Button layoutX="729.0" layoutY="213.0" mnemonicParsing="false" onAction="#mat_add" prefHeight="25.0" prefWidth="70.0" text="Добавить" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Рабочая зона">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="j_table" layoutX="1.0" prefHeight="300.0" prefWidth="850.0">
+                          <columns>
+                            <TableColumn fx:id="j_id" prefWidth="70.0" text="№" />
+                            <TableColumn fx:id="j_when" prefWidth="70.0" text="Дата" />
+                              <TableColumn fx:id="weight" prefWidth="61.0" text="Вес" />
+                              <TableColumn fx:id="j_ob_name" prefWidth="108.0" text="Объект" />
+                              <TableColumn fx:id="j_driver_fullname" prefWidth="108.0" text="Водитель" />
+                              <TableColumn fx:id="j_truck_name" prefWidth="108.0" text="Машина" />
+                              <TableColumn fx:id="j_gov_number" prefWidth="108.0" text="Гос. номер" />
+                              <TableColumn fx:id="j_mat_name" prefWidth="108.0" text="Материал" />
+                              <TableColumn fx:id="j_user_fullname" prefWidth="108.0" text="Пользователь" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="47.0" layoutY="317.0" text="№" />
+                        <Label layoutX="109.0" layoutY="317.0" text="ГГГГ-ММ-ДД" />
+                        <Label layoutX="223.0" layoutY="317.0" text="Вес" />
+                        <TextField fx:id="number_txt" layoutX="14.0" layoutY="351.0" prefWidth="80.0" />
+                        <TextField fx:id="date_txt" layoutX="104.0" layoutY="351.0" prefWidth="80.0" />
+                        <TextField fx:id="weight_txt" layoutX="192.0" layoutY="351.0" prefWidth="80.0" />
+                        <ComboBox fx:id="ob_cmb" layoutX="61.0" layoutY="429.0" prefWidth="150.0" promptText="Объект" />
+                        <ComboBox fx:id="driver_cmb" layoutX="217.0" layoutY="429.0" prefWidth="150.0" promptText="Водитель" />
+                        <ComboBox fx:id="truck_cmb" layoutX="373.0" layoutY="429.0" prefWidth="150.0" promptText="Машина" />
+                        <ComboBox fx:id="mat_cmb" layoutX="529.0" layoutY="429.0" prefWidth="150.0" promptText="Материал" />
+                        <ComboBox fx:id="user_cmb" layoutX="686.0" layoutY="429.0" prefWidth="150.0" promptText="Пользователь" />
+                        <Label layoutX="14.0" layoutY="404.0" text="Выбрать:" />
+                        <Button layoutX="759.0" layoutY="322.0" mnemonicParsing="false" onAction="#job_add" text="Добавить" />
+                        <Button layoutX="759.0" layoutY="364.0" mnemonicParsing="false" onAction="#job_edit" text="Изменить" />
+                        <Button layoutX="758.0" layoutY="502.0" mnemonicParsing="false" onAction="#job_refresh" prefWidth="71.0" text="Обновить" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Запросы">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="622.0" prefWidth="850.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="На складе">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="storage_table" layoutX="63.0" layoutY="33.0" prefHeight="200.0" prefWidth="300.0">
+                                            <columns>
+                                              <TableColumn fx:id="storage_mat" prefWidth="125.0" text="Материал" />
+                                              <TableColumn fx:id="storage_weight" prefWidth="172.0" text="На складе (в тоннах)" />
+                                            </columns>
+                                          </TableView>
+                                          <Label layoutX="407.0" layoutY="64.0" text="Материалы на складе на момент" />
+                                          <Label layoutX="636.0" layoutY="39.0" text="ГГГГ-ММ-ДД" />
+                                          <Button layoutX="611.0" layoutY="92.0" mnemonicParsing="false" onAction="#storage_build_moment" text="Построить таблицу" />
+                                          <TextField fx:id="storage_moment" layoutX="597.0" layoutY="60.0" />
+                                          <Button layoutX="68.0" layoutY="247.0" mnemonicParsing="false" onAction="#storage_build_now" text="Построить таблицу &quot;На складе в данный момент&quot;" />
+                                          <Button layoutX="611.0" layoutY="235.0" mnemonicParsing="false" onAction="#storage_build_interval" text="Построить таблицу" />
+                                          <TextField fx:id="storage_interval1" layoutX="512.0" layoutY="185.0" />
+                                          <TextField fx:id="storage_interval2" layoutX="683.0" layoutY="185.0" />
+                                          <Label layoutX="722.0" layoutY="210.0" text="ГГГГ-ММ-ДД" />
+                                          <Label layoutX="554.0" layoutY="210.0" text="ГГГГ-ММ-ДД" />
+                                          <Label layoutX="512.0" layoutY="168.0" text="С:" />
+                                          <Label layoutX="686.0" layoutY="168.0" text="До:" />
+                                          <Label layoutX="384.0" layoutY="189.0" text="Выбрать промежуток:" />
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Приход/Расход в определённый период">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="188.0" layoutY="282.0" text="Выбрать промежуток:" />
+                                          <Label layoutX="481.0" layoutY="261.0" text="До:" />
+                                          <Label layoutX="316.0" layoutY="261.0" text="С:" />
+                                          <Label layoutX="355.0" layoutY="303.0" text="ГГГГ-ММ-ДД" />
+                                          <TextField fx:id="coming_interval2" layoutX="476.0" layoutY="278.0" />
+                                          <TextField fx:id="coming_interval1" layoutX="316.0" layoutY="278.0" />
+                                          <Button layoutX="377.0" layoutY="320.0" mnemonicParsing="false" onAction="#coming_build_interval" text="Построить таблицу &quot;Приход&quot;" />
+                                          <TableView fx:id="comingconsumption_table" layoutX="329.0" layoutY="29.0" prefHeight="200.0" prefWidth="300.0">
+                                             <columns>
+                                                <TableColumn fx:id="comingconsumption_mat" prefWidth="125.0" text="Материал" />
+                                                <TableColumn fx:id="comingconsumption_weight" prefWidth="172.0" text="Количество (в тоннах)" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="515.0" layoutY="303.0" text="ГГГГ-ММ-ДД" />
+                                          <Label layoutX="520.0" layoutY="415.0" text="ГГГГ-ММ-ДД" />
+                                          <Button layoutX="378.0" layoutY="438.0" mnemonicParsing="false" onAction="#consumption_build_interval" text="Построить таблицу &quot;Расход&quot;" />
+                                          <TextField fx:id="consumption_interval2" layoutX="480.0" layoutY="390.0" />
+                                          <TextField fx:id="consumption_interval1" layoutX="320.0" layoutY="390.0" />
+                                          <Label layoutX="359.0" layoutY="415.0" text="ГГГГ-ММ-ДД" />
+                                          <Label layoutX="320.0" layoutY="373.0" text="С:" />
+                                          <Label layoutX="485.0" layoutY="373.0" text="До:" />
+                                          <Label layoutX="192.0" layoutY="394.0" text="Выбрать промежуток:" />
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Просмотр рабочей таблицы">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="121.0" layoutY="469.0" text="Выбрать промежуток:" />
+                                          <Label layoutX="468.0" layoutY="494.0" text="ГГГГ-ММ-ДД" />
+                                          <Label layoutX="301.0" layoutY="494.0" text="ГГГГ-ММ-ДД" />
+                                          <Label layoutX="433.0" layoutY="448.0" text="До:" />
+                                          <Label layoutX="270.0" layoutY="448.0" text="С:" />
+                                          <Button layoutX="608.0" layoutY="465.0" mnemonicParsing="false" onAction="#view_build" text="Построить таблицу" />
+                                          <TextField fx:id="view_interval2" layoutX="433.0" layoutY="465.0" />
+                                          <TextField fx:id="view_interval1" layoutX="270.0" layoutY="465.0" />
+                                          <TableView fx:id="view_table" layoutY="14.0" prefHeight="400.0" prefWidth="850.0">
+                                             <columns>
+                                                <TableColumn fx:id="view_id" prefWidth="70.0" text="№" />
+                                                <TableColumn fx:id="view_when" prefWidth="70.0" text="Дата" />
+                                                <TableColumn fx:id="view_weight" prefWidth="61.0" text="Вес" />
+                                                <TableColumn fx:id="view_ob_name" prefWidth="108.0" text="Объект" />
+                                                <TableColumn fx:id="view_driver_fullname" prefWidth="108.0" text="Водитель" />
+                                                <TableColumn fx:id="view_truck_name" prefWidth="108.0" text="Машина" />
+                                                <TableColumn fx:id="view_gov_number" prefWidth="108.0" text="Гос. номер" />
+                                                <TableColumn fx:id="view_mat_name" prefWidth="108.0" text="Материал" />
+                                                <TableColumn fx:id="view_user_fullname" prefWidth="108.0" text="Пользователь" />
+                                             </columns>
+                                          </TableView>
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="Траты на объектах">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="expense_table" layoutX="93.0" layoutY="45.0" prefHeight="310.0" prefWidth="401.0">
+                                            <columns>
+                                              <TableColumn fx:id="expense_ob_name" prefWidth="150.0" text="Объект" />
+                                              <TableColumn fx:id="expense_mat_name" prefWidth="150.0" text="Материал" />
+                                                <TableColumn fx:id="expense_weight" prefWidth="99.0" text="Количество (т.)" />
+                                            </columns>
+                                          </TableView>
+                                          <Label layoutX="528.0" layoutY="70.0" text="Выбрать промежуток даты" />
+                                          <Label layoutX="630.0" layoutY="96.0" text="С:" />
+                                          <Label layoutX="632.0" layoutY="158.0" text="До:" />
+                                          <Button layoutX="656.0" layoutY="233.0" mnemonicParsing="false" onAction="#expense_build_interval" text="Построить таблицу" />
+                                          <Button layoutX="233.0" layoutY="376.0" mnemonicParsing="false" onAction="#expense_build" text="Построить таблицу" />
+                                          <TextField fx:id="expense_interval1" layoutX="630.0" layoutY="113.0" />
+                                          <TextField fx:id="expense_interval2" layoutX="630.0" layoutY="175.0" />
+                                          <Label layoutX="669.0" layoutY="138.0" text="ГГГГ-ММ-ДД" />
+                                          <Label layoutX="669.0" layoutY="200.0" text="ГГГГ-ММ-ДД" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Редактирование работы">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="j_table1" layoutY="80.0" prefHeight="310.0" prefWidth="850.0">
+                           <columns>
+                              <TableColumn fx:id="j_id1" prefWidth="70.0" text="№" />
+                              <TableColumn fx:id="j_when1" prefWidth="70.0" text="Дата" />
+                              <TableColumn fx:id="weight1" prefWidth="61.0" text="Вес" />
+                              <TableColumn fx:id="j_ob_name1" prefWidth="108.0" text="Объект" />
+                              <TableColumn fx:id="j_driver_fullname1" prefWidth="108.0" text="Водитель" />
+                              <TableColumn fx:id="j_truck_name1" prefWidth="108.0" text="Машина" />
+                              <TableColumn fx:id="j_gov_number1" prefWidth="108.0" text="Гос. номер" />
+                              <TableColumn fx:id="j_mat_name1" prefWidth="108.0" text="Материал" />
+                              <TableColumn fx:id="j_user_fullname1" prefWidth="108.0" text="Пользователь" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="interval1" layoutX="166.0" layoutY="23.0" />
+                        <TextField fx:id="interval2" layoutX="332.0" layoutY="23.0" />
+                        <Button layoutX="494.0" layoutY="23.0" mnemonicParsing="false" onAction="#red_build" text="Построить таблицу" />
+                        <Label layoutX="166.0" layoutY="6.0" text="С:" />
+                        <Label layoutX="332.0" layoutY="6.0" text="До:" />
+                        <Label layoutX="205.0" layoutY="48.0" text="ГГГГ-ММ-ДД" />
+                        <Label layoutX="371.0" layoutY="48.0" text="ГГГГ-ММ-ДД" />
+                        <Label layoutX="14.0" layoutY="27.0" text="Выбрать промежуток:" />
+                        <Button layoutX="693.0" layoutY="413.0" mnemonicParsing="false" onAction="#red_edit" text="Изменить" />
+                        <Button layoutX="608.0" layoutY="413.0" mnemonicParsing="false" onAction="#red_add" text="Добавить" />
+                        <Label layoutX="8.0" layoutY="451.0" text="Выбрать:" />
+                        <ComboBox fx:id="user_cmb1" layoutX="637.0" layoutY="475.0" prefWidth="150.0" promptText="Пользователь" />
+                        <ComboBox fx:id="mat_cmb1" layoutX="480.0" layoutY="475.0" prefWidth="150.0" promptText="Материал" />
+                        <ComboBox fx:id="truck_cmb1" layoutX="322.0" layoutY="475.0" prefWidth="150.0" promptText="Машина" />
+                        <ComboBox fx:id="driver_cmb1" layoutX="166.0" layoutY="475.0" prefWidth="150.0" promptText="Водитель" />
+                        <ComboBox fx:id="ob_cmb1" layoutX="5.0" layoutY="475.0" prefWidth="150.0" promptText="Объект" />
+                        <TextField fx:id="weight_txt1" layoutX="171.0" layoutY="413.0" prefWidth="80.0" />
+                        <TextField fx:id="date_txt1" layoutX="86.0" layoutY="413.0" prefWidth="80.0" />
+                        <TextField fx:id="number_txt1" layoutY="413.0" prefWidth="80.0" />
+                        <Label layoutX="202.0" layoutY="394.0" text="Вес" />
+                        <Label layoutX="96.0" layoutY="394.0" text="ГГ-ММ-ДД" />
+                        <Label layoutX="33.0" layoutY="394.0" text="№" />
+                        <Button layoutX="776.0" layoutY="413.0" mnemonicParsing="false" onAction="#red_remove" text="Удалить" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Пользователи">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="user_table" layoutX="113.0" layoutY="14.0" prefHeight="200.0" prefWidth="625.0">
+                          <columns>
+                            <TableColumn fx:id="user_id" prefWidth="70.0" text="№" />
+                            <TableColumn fx:id="user_fullname" prefWidth="190.0" text="Ф.И.О. Пользователя" />
+                              <TableColumn fx:id="role" minWidth="0.0" prefWidth="120.0" text="Роль" />
+                              <TableColumn fx:id="login" prefWidth="119.0" text="Логин" />
+                              <TableColumn fx:id="password" prefWidth="125.0" text="Пароль" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="usernumber_txt" layoutX="77.0" layoutY="287.0" prefWidth="70.0" />
+                        <TextField fx:id="username_txt" layoutX="154.0" layoutY="287.0" prefWidth="160.0" />
+                        <ComboBox fx:id="userrole_cmb" layoutX="320.0" layoutY="287.0" prefWidth="150.0" promptText="роль" />
+                        <TextField fx:id="userlog_txt" layoutX="478.0" layoutY="287.0" prefWidth="97.0" />
+                        <Label layoutX="77.0" layoutY="262.0" text="№" />
+                        <Label layoutX="154.0" layoutY="262.0" text="Ф.И.О." />
+                        <Label layoutX="320.0" layoutY="262.0" text="Выбрать:" />
+                        <Label layoutX="478.0" layoutY="262.0" text="Логин:" />
+                        <Button layoutX="686.0" layoutY="255.0" mnemonicParsing="false" onAction="#user_add" text="Добавить" />
+                        <Button layoutX="686.0" layoutY="287.0" mnemonicParsing="false" onAction="#user_edit" text="Изменить" />
+                        <Button layoutX="686.0" layoutY="319.0" mnemonicParsing="false" onAction="#user_remove" prefHeight="25.0" prefWidth="70.0" text="Удалить" />
+                        <Label layoutX="582.0" layoutY="262.0" text="Пароль" />
+                        <TextField fx:id="userpassw_txt" layoutX="582.0" layoutY="287.0" prefWidth="97.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

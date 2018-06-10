@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Planner">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Справочник &quot;Объекты&quot;">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="ob_table" layoutX="214.0" layoutY="14.0" prefHeight="195.0" prefWidth="370.0">
+                          <columns>
+                            <TableColumn fx:id="ob_id" prefWidth="69.0" text="№" />
+                            <TableColumn fx:id="ob_name" prefWidth="300.0" text="Объекты" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="514.0" layoutY="225.0" mnemonicParsing="false" onAction="#ob_add" prefHeight="25.0" prefWidth="70.0" text="Добавить" />
+                        <Button layoutX="514.0" layoutY="265.0" mnemonicParsing="false" onAction="#ob_edit" prefHeight="25.0" prefWidth="70.0" text="Изменить" />
+                        <Button layoutX="514.0" layoutY="304.0" mnemonicParsing="false" onAction="#ob_remove" prefHeight="25.0" prefWidth="70.0" text="Удалить" />
+                        <TextField fx:id="ob_txt2" layoutX="294.0" layoutY="265.0" prefHeight="25.0" prefWidth="210.0" />
+                        <TextField fx:id="ob_txt1" layoutX="214.0" layoutY="265.0" prefHeight="25.0" prefWidth="70.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Справочник &quot;Материалы">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="520.0" layoutY="221.0" mnemonicParsing="false" onAction="#mat_add" prefHeight="25.0" prefWidth="70.0" text="Добавить" />
+                        <Button layoutX="520.0" layoutY="258.0" mnemonicParsing="false" onAction="#mat_edit" prefHeight="25.0" prefWidth="70.0" text="Изменить" />
+                        <Button layoutX="520.0" layoutY="298.0" mnemonicParsing="false" onAction="#mat_remove" prefHeight="25.0" prefWidth="70.0" text="Удалить" />
+                        <TextField fx:id="mat_txt2" layoutX="303.0" layoutY="258.0" prefHeight="25.0" prefWidth="210.0" />
+                        <TextField fx:id="mat_txt1" layoutX="217.0" layoutY="258.0" prefHeight="25.0" prefWidth="70.0" />
+                        <TableView fx:id="mat_table" layoutX="217.0" layoutY="14.0" prefHeight="195.0" prefWidth="370.0">
+                           <columns>
+                              <TableColumn fx:id="mat_id" prefWidth="75.0" text="№" />
+                              <TableColumn fx:id="mat_name" prefWidth="294.0" text="Материалы" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Справочник &quot;Водители&quot;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="driver_txt1" layoutX="240.0" layoutY="258.0" prefHeight="25.0" prefWidth="70.0" />
+                        <TextField fx:id="driver_txt2" layoutX="320.0" layoutY="258.0" prefHeight="25.0" prefWidth="210.0" />
+                        <Button layoutX="540.0" layoutY="298.0" mnemonicParsing="false" onAction="#driver_remove" prefHeight="25.0" prefWidth="70.0" text="Удалить" />
+                        <Button layoutX="540.0" layoutY="258.0" mnemonicParsing="false" onAction="#driver_edit" prefHeight="25.0" prefWidth="70.0" text="Изменить" />
+                        <Button layoutX="540.0" layoutY="221.0" mnemonicParsing="false" onAction="#driver_add" prefHeight="25.0" prefWidth="70.0" text="Добавить" />
+                        <TableView fx:id="driver_table" layoutX="240.0" layoutY="14.0" prefHeight="195.0" prefWidth="370.0">
+                           <columns>
+                              <TableColumn fx:id="driver_id" prefWidth="66.0" text="№" />
+                              <TableColumn fx:id="driver_fullname" prefWidth="303.0" text="Ф.И.О. Водителя" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Справочник &quot;Машины&quot;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="truck_txt2" layoutX="295.0" layoutY="258.0" prefHeight="25.0" prefWidth="123.0" />
+                        <Button layoutX="555.0" layoutY="222.0" mnemonicParsing="false" onAction="#truck_add" prefHeight="25.0" prefWidth="70.0" text="Добавить" />
+                        <Button layoutX="555.0" layoutY="258.0" mnemonicParsing="false" onAction="#truck_edit" prefHeight="25.0" prefWidth="70.0" text="Изменить" />
+                        <Button layoutX="555.0" layoutY="298.0" mnemonicParsing="false" onAction="#truck_remove" prefHeight="25.0" prefWidth="70.0" text="Удалить" />
+                        <TextField fx:id="truck_txt3" layoutX="425.0" layoutY="259.0" prefHeight="25.0" prefWidth="123.0" />
+                        <TextField fx:id="truck_txt1" layoutX="225.0" layoutY="258.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TableView fx:id="truck_table" layoutX="225.0" layoutY="13.0" prefHeight="195.0" prefWidth="400.0">
+                           <columns>
+                              <TableColumn fx:id="truck_id" prefWidth="55.0" text="№" />
+                              <TableColumn fx:id="truck_name" prefWidth="165.0" text="Марка машины" />
+                              <TableColumn fx:id="gov_number" prefWidth="179.0" text="Гос. номер" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

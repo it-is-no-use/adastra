@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: #E6E6FA;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Entrance">
+   <children>
+      <AnchorPane layoutX="125.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2E3348;">
+         <children>
+            <AnchorPane layoutY="100.0" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: #fafafa;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="292.0" layoutY="-51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@star-128.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="login" layoutX="50.0" layoutY="62.0" prefWidth="200.0" promptText="Логин">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="50.0" layoutY="16.0" text="Авторизация">
+                     <font>
+                        <Font name="Impact" size="25.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="password" layoutX="50.0" layoutY="113.0" prefWidth="200.0" promptText="Пароль">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <Button layoutX="250.0" layoutY="185.0" mnemonicParsing="false" onAction="#user_entrance" style="-fx-background-color: #2E4C5B;" text="Войти" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="label" layoutX="196.0" layoutY="269.0" textFill="#830000" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="411.0" layoutY="14.0" text="Adastra" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
